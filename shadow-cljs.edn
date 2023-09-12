@@ -1,0 +1,17 @@
+{:dependencies
+ [[reagent "1.1.1"]]
+
+ :source-paths
+ ["src"]
+
+ :dev-http
+ {8080 "public"}
+
+ :devtools {:after-load d3.app/init}
+
+ :builds
+ {:app {:target :browser
+        :output-dir "public/js"
+        :asset-path "/js"
+        :module-loader true
+        :modules {:main {:init-fn d3.app/init}}}}}
